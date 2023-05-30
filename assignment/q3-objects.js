@@ -15,6 +15,11 @@ const bookIdArr = ["NLB1", "NLB2", "NLB3", "NLB4"];
 const bookTitle = ["Lord of the Rings", "Programming for Dummies", "Introduction to Software Testing", "How to be a Software Developer"];
 let booksObj = {}; 
 
+//this function is to combine bookIdArr and bookTitle into an object
+//object have keys : values
+//keys = bookIdArr
+//values = bookTitle
+//return booksObj to allow access of the constructed object outside of function
 function convert(keyArr, valueArr){
     
     // Add code here
@@ -25,6 +30,13 @@ function convert(keyArr, valueArr){
         - Step 3: Within the for-loop, add the key and value to the local scoped object.
         - Step 4: Write a return statement to return the object literal after the for-loop code block.
     */
+    const localBooksObj = {}; //local scoped object
+
+    for (let i = 0; i < keyArr.length; i++) {
+            localBooksObj[keyArr[i]] = valueArr[i];
+    } 
+        
+    return localBooksObj;
 }
 
 function printByKey(key){

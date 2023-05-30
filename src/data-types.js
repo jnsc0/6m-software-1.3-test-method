@@ -1,4 +1,7 @@
-const num = 1;
+//variables are named containers of information for referencing and manipulation.
+
+
+const num = 1; 
 console.log("num",typeof num);
 
 const str = "1";
